@@ -1,13 +1,10 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import AddCategory from "./components/AddCategory";
+import GifGrid from "./components/GifGrid";
 
 const GifApp = () => {
-  const [categories, setCategories] = useState([
-    "my dress up darling",
-    "attack on titan",
-    "dragon slayer",
-  ]);
+  const [categories, setCategories] = useState(["my dress up darling"]);
 
   return (
     <>
@@ -16,7 +13,7 @@ const GifApp = () => {
       <hr />
       <ol>
         {categories.map((category, i) => (
-          <li key={`${i}-${category}`}>{category}</li>
+          <GifGrid category={category} key={`${i}-${category}`} />
         ))}
       </ol>
     </>

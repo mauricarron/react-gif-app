@@ -13,3 +13,23 @@ input {
   font-size: 1.3rem;
   color: gray;
 }
+
+.gif-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  height: 300px;
+  margin: 1rem;
+
+  border-color: grey;
+  border-radius: 1rem;
+}
+.card p {
+  text-align: center;
+}
+
+.card img {
+  height: 250px;
+}
