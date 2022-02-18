@@ -23,7 +23,7 @@ input {
   height: 300px;
   margin: 1rem;
 
-  border-color: grey;
+  border: 1pt grey solid;
   border-radius: 1rem;
 }
 .card p {
