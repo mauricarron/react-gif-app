@@ -2,6 +2,7 @@ import { shallow } from "enzyme";
 import AddCategory from "../../components/AddCategory";
 
 describe("tests on <AddCategory />", () => {
+  const handleChange = jest.fn();
   const setCategories = jest.fn();
 
   let wrapper = shallow(<AddCategory setCategories={setCategories} />);
@@ -27,5 +28,15 @@ describe("tests on <AddCategory />", () => {
     wrapper.find("input").simulate("submit", { preventDefault() {} });
 
     expect(setCategories).not.toHaveBeenCalled();
+  });
+
+  test("should handle form input and submit", () => {
+    const value = "Input Changed";
+
+    wrapper.find("input").simulate("change", { target: { value } });
+    wrapper.find("form").simulate("submit", { preventDefault() {} });
+
+    expect(setCategories).toHaveBeenCalled();
+    expect(wrapper.find("input").prop("value")).toBe("");
   });
 });
