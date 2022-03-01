@@ -2,9 +2,14 @@ import { shallow } from "enzyme";
 import AddCategory from "../../components/AddCategory";
 
 describe("tests on <AddCategory />", () => {
-  const setCategories = () => {};
+  const setCategories = jest.fn();
 
-  const wrapper = shallow(<AddCategory setCategories={setCategories} />);
+  let wrapper = shallow(<AddCategory setCategories={setCategories} />);
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    wrapper = shallow(<AddCategory setCategories={setCategories} />);
+  });
 
   test("should match Snapshot", () => {
     expect(wrapper).toMatchSnapshot();
@@ -16,5 +21,11 @@ describe("tests on <AddCategory />", () => {
 
     input.simulate("change", { target: { value } });
     expect(wrapper.find("p").text().trim()).toBe(value);
+  });
+
+  test("should handle submit", () => {
+    wrapper.find("input").simulate("submit", { preventDefault() {} });
+
+    expect(setCategories).not.toHaveBeenCalled();
   });
 });
