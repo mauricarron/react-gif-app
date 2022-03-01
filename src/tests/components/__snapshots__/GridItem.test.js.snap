@@ -5,6 +5,7 @@ exports[`tests on <GridItem /> should match component snapshot 1`] = `
   className="card animate__animated animate__fadeIn"
 >
   <img
+    alt="My Image"
     src="https://localhost/imagen.jpg"
   />
 </li>

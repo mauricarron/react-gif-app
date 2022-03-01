@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-const GridItem = ({ url }) => {
+const GridItem = ({ title, url }) => {
   return (
     <li className="card animate__animated animate__fadeIn">
-      <img src={url}></img>
+      <img src={url} alt={title}></img>
     </li>
   );
 };
