@@ -9,12 +9,11 @@ const GifGrid = ({ category }) => {
 
   return (
     <>
-      <h3>{category}</h3>
-      <div className="gif-grid">
+      <ul className="gif-grid">
         {loading
           ? "buscando gifs"
           : data.map((d) => <GridItem {...d} key={d.id} />)}
-      </div>
+      </ul>
     </>
   );
 };

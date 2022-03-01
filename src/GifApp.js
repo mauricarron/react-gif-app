@@ -1,25 +1,23 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 import AddCategory from "./components/AddCategory";
 import GifGrid from "./components/GifGrid";
 
 const GifApp = () => {
-  const [categories, setCategories] = useState(["my dress up darling"]);
+  const [categories, setCategories] = useState(["kimetsu no yaiba"]);
 
   return (
     <>
-      <h1>GifApp</h1>
-      <AddCategory setCategories={setCategories} />
-      <hr />
-      <ol>
+      <div className="search-bar">
+        <h1>.gifAPP</h1>
+        <AddCategory setCategories={setCategories} />
+      </div>
+      <div>
         {categories.map((category, i) => (
           <GifGrid category={category} key={`${i}-${category}`} />
         ))}
-      </ol>
+      </div>
     </>
   );
 };
-
-GifApp.propTypes = {};
 
 export default GifApp;

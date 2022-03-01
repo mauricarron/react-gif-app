@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests on <GridItem /> should match component snapshot 1`] = `
+<li
+  className="card animate__animated animate__fadeIn"
+>
+  <img
+    src="https://localhost/imagen.jpg"
+  />
+</li>
+`;

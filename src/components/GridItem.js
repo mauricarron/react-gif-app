@@ -1,12 +1,14 @@
-import React from "react";
-
-const GridItem = ({ title, url }) => {
+import PropTypes from "prop-types";
+const GridItem = ({ url }) => {
   return (
-    <div className="card animate__animated animate__fadeIn">
-      <p>{title}</p>
+    <li className="card animate__animated animate__fadeIn">
       <img src={url}></img>
-    </div>
+    </li>
   );
+};
+
+GridItem.propTypes = {
+  url: PropTypes.string.isRequired,
 };
 
 export default GridItem;
