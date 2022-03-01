@@ -9,4 +9,12 @@ describe("tests on <AddCategory />", () => {
   test("should match Snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  test("should handle the input change", () => {
+    const input = wrapper.find("input");
+    const value = "Input Changed";
+
+    input.simulate("change", { target: { value } });
+    expect(wrapper.find("p").text().trim()).toBe(value);
+  });
 });
