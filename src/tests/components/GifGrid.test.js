@@ -27,10 +27,12 @@ describe("tests on <GifGrid />", () => {
     ];
     useFetchGif.mockReturnValue({
       data: gifs,
-      loading: true,
+      loading: false,
     });
 
     const wrapper = shallow(<GifGrid category={category} />);
     expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find("p").exists()).toBe(false);
+    expect(wrapper.find("GridItem").length).toBe(gifs.length);
   });
 });

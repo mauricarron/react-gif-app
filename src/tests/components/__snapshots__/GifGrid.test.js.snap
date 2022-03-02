@@ -5,7 +5,9 @@ exports[`tests on <GifGrid /> should match snapshot 1`] = `
   <ul
     className="gif-grid"
   >
-    buscando gifs
+    <p>
+      buscando gifs
+    </p>
   </ul>
 </Fragment>
 `;
@@ -15,7 +17,18 @@ exports[`tests on <GifGrid /> should match snapshot with call from useFetchGif 1
   <ul
     className="gif-grid"
   >
-    buscando gifs
+    <GridItem
+      id="ABC"
+      key="ABC"
+      title="Mi Busqueda"
+      url="https://direccion.img.jpg"
+    />
+    <GridItem
+      id="DEF"
+      key="DEF"
+      title="Mi Segunda Busqueda"
+      url="https://direccion.img2.jpg"
+    />
   </ul>
 </Fragment>
 `;
