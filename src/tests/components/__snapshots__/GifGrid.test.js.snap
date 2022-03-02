@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests on <GifGrid /> should match snapshot 1`] = `
+<Fragment>
+  <ul
+    className="gif-grid"
+  >
+    buscando gifs
+  </ul>
+</Fragment>
+`;
+
+exports[`tests on <GifGrid /> should match snapshot with call from useFetchGif 1`] = `
+<Fragment>
+  <ul
+    className="gif-grid"
+  >
+    buscando gifs
+  </ul>
+</Fragment>
+`;

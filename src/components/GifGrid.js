@@ -18,6 +18,8 @@ const GifGrid = ({ category }) => {
   );
 };
 
-GifGrid.propTypes = {};
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired,
+};
 
 export default GifGrid;
