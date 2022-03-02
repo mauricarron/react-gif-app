@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests on <GifApp /> should match components with categories 1`] = `
+<Fragment>
+  <div
+    className="search-bar"
+  >
+    <h1>
+      .gifAPP
+    </h1>
+    <AddCategory
+      setCategories={[Function]}
+    />
+  </div>
+  <div>
+    <GifGrid
+      category="Kimetsu no yaiba"
+      key="0-Kimetsu no yaiba"
+    />
+    <GifGrid
+      category="jujutsu kaisen"
+      key="1-jujutsu kaisen"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`tests on <GifApp /> should match snapshot 1`] = `
+<Fragment>
+  <div
+    className="search-bar"
+  >
+    <h1>
+      .gifAPP
+    </h1>
+    <AddCategory
+      setCategories={[Function]}
+    />
+  </div>
+  <div />
+</Fragment>
+`;
